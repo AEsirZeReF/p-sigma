@@ -1,0 +1,29 @@
+{
+  "name": "proyecto-induccion-escuela",
+  "version": "1.0.0",
+  "description": "Sera una pagina WEB para una escuela",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AEsirZeReF/p-sigma.git"
+  },
+  "author": "By Gabriel Fabrizio Andy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AEsirZeReF/p-sigma/issues"
+  },
+  "homepage": "https://github.com/AEsirZeReF/p-sigma#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
