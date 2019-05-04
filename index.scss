@@ -1,2 +1,10 @@
-@import "node_modules/bootstrap/scss/bootstrap.scss";
+$colores: red;
 
+.titulo {
+  color: $colores;
+  font-size: 100px;
+}
+.parrafo {
+  color: $colores;
+  font-size: 10px;
+}
