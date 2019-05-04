@@ -3,7 +3,6 @@ const sass = require("gulp-sass");
 const rename = require("gulp-rename");
 const browserSync = require("browser-sync").create();
 const autoprefixer = require("gulp-autoprefixer");
-const cleanCSS = require("gulp-clean-css");
 
 /*function style(){
     return gulp.src('./index.scss')
@@ -34,20 +33,21 @@ exports.watch = watch;*/
 
 var paths = {
   style: {
-    src: "./index.scss",
+    src: "./*.scss",
     dest: "./public/css"
   }
 };
 function style() {
-  return (
-    gulp
-      .src(paths.style.src)
-      .pipe(sass())
-      //.pipe(rename('estilos.css'))
-      //.pipe(cleanCSS())
-      .pipe(gulp.dest(paths.style.dest))
-      .pipe(browserSync.stream())
-  );
+  return gulp
+    .src(paths.style.src)
+    .pipe(sass({}))
+    .pipe(
+      autoprefixer({
+        versions: ["last 2 browsers"]
+      })
+    )
+    .pipe(gulp.dest(paths.style.dest))
+    .pipe(browserSync.stream());
 }
 
 function watch() {
